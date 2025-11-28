@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workflow Designer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LEFT TOOLBAR -->
+    <aside class="sidebar">
+        <h2 class="heading">Workflow Tools</h2>
+
+        <div class="tool" draggable="true" data-type="start">● Start</div>
+        <div class="tool" draggable="true" data-type="task">■ Task</div>
+        <div class="tool" draggable="true" data-type="decision">◆ Decision</div>
+        <div class="tool" draggable="true" data-type="api">⇄ API Step</div>
+        <div class="tool" draggable="true" data-type="end">● End</div>
+
+        <div class="section">
+            <h3>Import Data</h3>
+            <input type="file" id="csvUpload" accept=".csv">
+            <p class="hint">Upload workflow CSV to auto-generate steps.</p>
+        </div>
+    </aside>
+
+    <!-- MAIN CANVAS -->
+    <main id="canvas">
+        <div class="canvas-hint">Drag components here to build your workflow</div>
+    </main>
+
+    <!-- RIGHT PROPERTIES PANEL -->
+    <aside class="properties">
+        <h2 class="heading">Step Properties</h2>
+
+        <label>Title</label>
+        <input type="text" id="prop-title">
+
+        <label>Description</label>
+        <textarea id="prop-desc"></textarea>
+
+        <label>Owner / Team</label>
+        <input type="text" id="prop-owner">
+
+        <label>Estimated Duration</label>
+        <input type="text" id="prop-time" placeholder="e.g., 2 hours">
+
+        <button id="saveButton">Save Changes</button>
+        <button id="deleteButton" class="delete-btn">Delete Step</button>
+    </aside>
+
+<script src="script.js"></script>
+</body>
+</html>
