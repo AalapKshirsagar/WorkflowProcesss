@@ -23,11 +23,17 @@
             <input type="file" id="csvUpload" accept=".csv">
             <p class="hint">Upload workflow CSV to auto-generate steps.</p>
         </div>
+
+        <div class="section">
+            <h3>Run</h3>
+            <button id="runButton" class="run-btn">Start Process</button>
+            <p class="hint">Executes top-to-bottom and exports files.</p>
+        </div>
     </aside>
 
     <!-- MAIN CANVAS -->
     <main id="canvas">
-        <div class="canvas-hint">Drag components here to build your workflow</div>
+        <div class="canvas-hint">Drag components here or import a CSV to build your workflow</div>
     </main>
 
     <!-- RIGHT PROPERTIES PANEL -->
@@ -50,6 +56,7 @@
         <button id="deleteButton" class="delete-btn">Delete Step</button>
     </aside>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
