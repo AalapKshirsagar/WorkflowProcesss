@@ -1,0 +1,142 @@
+* {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background: #f4f6f9;
+}
+
+/* SIDEBAR LEFT */
+.sidebar {
+    width: 230px;
+    background: #ffffff;
+    border-right: 1px solid #ddd;
+    padding: 18px;
+}
+
+.heading {
+    margin-top: 0;
+    font-size: 20px;
+    color: #222;
+    font-weight: 600;
+}
+
+.tool {
+    background: #fdfdfd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: grab;
+    transition: 0.2s;
+}
+
+.tool:hover {
+    background: #f1f3ff;
+    border-color: #4c6ef5;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.hint {
+    font-size: 12px;
+    color: #666;
+}
+
+/* CANVAS */
+#canvas {
+    flex: 1;
+    position: relative;
+    overflow: auto;
+    background: repeating-linear-gradient(
+        45deg,
+        #f3f3f3,
+        #f3f3f3 20px,
+        #ececec 20px,
+        #ececec 40px
+    );
+}
+
+.canvas-hint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #777;
+    font-size: 18px;
+}
+
+/* NODES */
+.node {
+    position: absolute;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.node:hover {
+    transform: scale(1.03);
+}
+
+.node.start { background: #c8f7c8; }
+.node.task { background: #fff6a2; }
+.node.decision { background: #cfe2ff; }
+.node.api { background: #ffb3b3; }
+.node.end { background: #ffd3a4; }
+
+/* PROPERTIES PANEL */
+.properties {
+    width: 260px;
+    background: #ffffff;
+    border-left: 1px solid #ddd;
+    padding: 18px;
+}
+
+.properties input,
+.properties textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* BUTTONS */
+#saveButton {
+    width: 100%;
+    padding: 10px;
+    background: #4c6ef5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+#saveButton:hover {
+    background: #3b57d6;
+}
+
+.delete-btn {
+    width: 100%;
+    padding: 10px;
+    background: #ff5c5c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.delete-btn:hover {
+    background: #e04646;
+}
