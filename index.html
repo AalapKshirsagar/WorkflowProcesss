@@ -153,6 +153,71 @@
 
           <p class="hint">Only clients with outstanding or overdue amounts are listed.</p>
         </section>
+        <section id="analysisSection" class="tab-section">
+
+  <h2>Loan & Risk Analysis</h2>
+
+  <div class="upload-box">
+    <label for="dataFile">Upload CSV File:</label>
+    <input type="file" id="dataFile" accept=".csv" />
+  </div>
+
+  <section id="kpiSection" hidden>
+    <h3>Portfolio KPIs</h3>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <p class="kpi-title">Total Clients</p>
+        <p id="kpiClients" class="kpi-value">0</p>
+      </div>
+
+      <div class="kpi-card">
+        <p class="kpi-title">Total Loan Amount</p>
+        <p id="kpiTotalLoan" class="kpi-value">₹0</p>
+      </div>
+
+      <div class="kpi-card">
+        <p class="kpi-title">Total Outstanding</p>
+        <p id="kpiOutstanding" class="kpi-value">₹0</p>
+      </div>
+
+      <div class="kpi-card">
+        <p class="kpi-title">Overdue Clients</p>
+        <p id="kpiOverdueClients" class="kpi-value">0</p>
+      </div>
+
+      <div class="kpi-card">
+        <p class="kpi-title">Overdue Amount</p>
+        <p id="kpiOverdueAmount" class="kpi-value">₹0</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="summarySection" hidden>
+    <h3>Summary Insights</h3>
+    <p id="summaryText"></p>
+  </section>
+
+  <section id="tableSection" hidden>
+    <h3>Client Risk Table</h3>
+
+    <table id="clientTable">
+      <thead>
+        <tr>
+          <th>Client</th>
+          <th>Total Loan</th>
+          <th>Outstanding</th>
+          <th>Due Date</th>
+          <th>Days Overdue</th>
+          <th>Risk</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+ 
+
+</section>
+
 
       </div>
     </section>
